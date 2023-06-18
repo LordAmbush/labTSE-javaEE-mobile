@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".WebLoginActivity"
+    >
+    <!-- User info -->
+    <android.support.v7.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="11dp">
+
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvInfoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informacion de usuario"
+                android:textStyle="bold"
+                android:textSize="22dp"/>
+
+            <View
+                android:layout_width="230dp"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvNumeroDocumento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Documento:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tvPrimerNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tvPrimerApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- Viaje info -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvEsConductor"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="11dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvInfoViaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Informacion del viaje"
+                android:textSize="22dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="210dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvInfoViaje"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator"
+                android:layout_marginTop="8dp"
+                android:text="Id: "
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvId"
+                android:layout_marginTop="4dp"
+                android:text="Estado:"
+                android:textSize="18dp" />
+
+            <!-- Viaje info button -->
+            <Button
+                android:id="@+id/refreshButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/refresh_icon" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- UsuarioInvalido info -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvNoEsConductor"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="11dp"
+        app:cardCornerRadius="11dp">
+
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El usuario ingresado no es un Conductor"
+                android:textStyle="bold"
+                android:textSize="22dp"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_iniciar"
+            android:elevation="11dp"
+            android:padding="8dp"
+            android:text="Iniciar Viaje"
+            android:textColor="@color/black" />
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button_finalizar"
+            android:elevation="11dp"
+            android:padding="8dp"
+            android:text="Finalizar viaje"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

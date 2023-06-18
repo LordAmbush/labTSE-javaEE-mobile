@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/colorActiveRed" /> <!-- Set the color when the button is pressed -->
+            <corners android:radius="8dp" /> <!-- Adjust the radius value to control the roundness of the corners -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/colorInactiveButton" /> <!-- Set the default color for the button -->
+            <corners android:radius="8dp" /> <!-- Adjust the radius value to control the roundness of the corners -->
+        </shape>
+    </item>
+</selector>
