@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="uy.com.orih.iduruguay">
+    package="uy.com.grupo15.CargaUyMobile">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".WebLoginActivity"
+            android:name="uy.com.grupo15.CargaUyMobile.WebLoginActivity"
             android:label="Carga.uy"
             tools:node="replace">
             <intent-filter>
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="uy.com.grupo15.CargaUyMobile.MainActivity"
             android:label="Login Carga.uy"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

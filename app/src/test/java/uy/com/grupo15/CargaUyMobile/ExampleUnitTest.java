@@ -1,4 +1,4 @@
-package uy.com.orih.iduruguay;
+package uy.com.grupo15.CargaUyMobile;
 
 import org.junit.Test;
 
