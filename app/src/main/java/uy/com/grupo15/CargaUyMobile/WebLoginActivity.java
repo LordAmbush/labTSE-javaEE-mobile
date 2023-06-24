@@ -282,6 +282,8 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                     String ci = jsonResponse.optString("ci");
                     String estado = jsonResponse.optString("estado");
                     String id = jsonResponse.optString("id");
+                    String desde = jsonResponse.optString("desde");
+                    String hasta = jsonResponse.optString("hasta");
                     idViaje = id;
                     estadoViaje = estado;
                     //escondo cardView de ususario incorrecto
@@ -293,6 +295,10 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                     idTextView.setText("ID: " + id);
                     final TextView estadoTextView = (TextView) activity.findViewById(R.id.tvEstado);
                     estadoTextView.setText("Estado: " + estado);
+                    final TextView desdeTextView = (TextView) activity.findViewById(R.id.tvDesde);
+                    estadoTextView.setText("Desde: " + desde);
+                    final TextView hastaTextView = (TextView) activity.findViewById(R.id.tvHasta);
+                    estadoTextView.setText("Hasta: " + hasta);
                     Button refresh = (Button) activity.findViewById(R.id.refreshButton);
                     refresh.setOnClickListener(activity);
 

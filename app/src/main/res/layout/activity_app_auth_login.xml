@@ -115,6 +115,25 @@
                 android:text="Estado:"
                 android:textSize="18dp" />
 
+            <TextView
+                android:id="@+id/tvDesde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEstado"
+                android:layout_marginTop="4dp"
+                android:text="Desde:"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvHasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDesde"
+                android:layout_marginTop="4dp"
+                android:text="Hasta:"
+                android:textSize="18dp" />
+
+
             <!-- Viaje info button -->
             <Button
                 android:id="@+id/refreshButton"

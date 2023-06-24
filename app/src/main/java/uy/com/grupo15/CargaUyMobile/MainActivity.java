@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void LoginWeb (View v){
-        String url = Constants.AUTHORIZATION_URL + "?response_type=code&scope=openid%20document%20personal_info%20email%20auth_info&client_id=890192&state=asdf934087&redirect_uri=https%3A%2F%2Fopenidconnect.net%2Fcallback";
+        String redirectUri = Uri.encode(Constants.REDIRECT_URI);
+        String url = Constants.AUTHORIZATION_URL + "?response_type=code&scope=openid%20document%20personal_info%20email%20auth_info&client_id=890192&state=asdf934087&redirect_uri=" + redirectUri;
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
