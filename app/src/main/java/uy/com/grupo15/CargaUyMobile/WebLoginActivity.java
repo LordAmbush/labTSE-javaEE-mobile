@@ -32,8 +32,6 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
     static String code = "";
     static String state = "";
     static String token = "";
-
-    //En el post exec del boton llamar func para pedir viaje
     static String estadoViaje = "";
     static String idViaje = "";
     static String ci = "";
@@ -99,7 +97,7 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                 String code = params[0];
 
                 String accessTokenUrl = Constants.ACCESSTOKEN_URL;
-                String redirectUri = Constants.REDIRECT_URI;
+                String redirectUri = "http://localhost:8080/javaEE.lab2023-web/callback";
                 String clientId = Constants.CLIENT_ID;
                 String clientSecret = Constants.CLIENT_SECRET;
                 String resultAccessToken = null;
@@ -296,9 +294,9 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                     final TextView estadoTextView = (TextView) activity.findViewById(R.id.tvEstado);
                     estadoTextView.setText("Estado: " + estado);
                     final TextView desdeTextView = (TextView) activity.findViewById(R.id.tvDesde);
-                    estadoTextView.setText("Desde: " + desde);
+                    desdeTextView.setText("Desde: " + desde);
                     final TextView hastaTextView = (TextView) activity.findViewById(R.id.tvHasta);
-                    estadoTextView.setText("Hasta: " + hasta);
+                    hastaTextView.setText("Hasta: " + hasta);
                     Button refresh = (Button) activity.findViewById(R.id.refreshButton);
                     refresh.setOnClickListener(activity);
 

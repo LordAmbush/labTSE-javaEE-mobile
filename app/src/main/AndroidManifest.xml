@@ -23,9 +23,10 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="openidconnect.net"
-                    android:path="/callback"
-                    android:scheme="https" />
+                    android:host="localhost"
+                    android:port="8080"
+                    android:path="/javaEE.lab2023-web/callback"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity
