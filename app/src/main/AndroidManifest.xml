@@ -31,7 +31,7 @@
         </activity>
         <activity
             android:name="uy.com.grupo15.CargaUyMobile.MainActivity"
-            android:label="Login Carga.uy"
+            android:label="Carga.uy"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

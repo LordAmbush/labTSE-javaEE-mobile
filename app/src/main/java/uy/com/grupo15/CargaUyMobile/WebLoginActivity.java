@@ -51,6 +51,19 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
         code = uresultado.getQueryParameter("code");
         state = uresultado.getQueryParameter("state");
 
+        //escondo cardviews
+        CardView cardView = (CardView) findViewById(R.id.cvEsConductor);
+        cardView.setVisibility(View.GONE);
+        CardView cardView2 = (CardView) findViewById(R.id.cvNoEsConductor);
+        cardView2.setVisibility(View.GONE);
+        //oculto los botones
+        Button botonVerde = (Button) findViewById(R.id.button1);
+        botonVerde.setVisibility(View.GONE);
+        Button botonRojo = (Button) findViewById(R.id.button2);
+        botonRojo.setVisibility(View.GONE);
+        Button refresh = (Button) findViewById(R.id.refreshButton);
+        refresh.setVisibility(View.GONE);
+
         //pasar el codigo al /token para obtener el accessToken
         if(code != null){
             token = getTokenFromCode(code,this);
@@ -308,6 +321,10 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                     //escondo el cardView correspondiente a info del viaje
                     CardView cardView = (CardView) activity.findViewById(R.id.cvEsConductor);
                     cardView.setVisibility(View.GONE);
+                    TextView idTextView = (TextView) activity.findViewById(R.id.tvError);
+                    idTextView.setText("El usuario ingresado no es un Conductor");
+
+                    cardView.setVisibility(View.VISIBLE);
                     //oculto los botones
                     Button botonVerde = (Button) activity.findViewById(R.id.button1);
                     botonVerde.setVisibility(View.GONE);
@@ -315,7 +332,6 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
                     botonRojo.setVisibility(View.GONE);
                     Button refresh = (Button) activity.findViewById(R.id.refreshButton);
                     refresh.setVisibility(View.GONE);
-
                 }
             }
 
