@@ -51,18 +51,7 @@ public class WebLoginActivity extends AppCompatActivity implements View.OnClickL
         code = uresultado.getQueryParameter("code");
         state = uresultado.getQueryParameter("state");
 
-        //escondo cardviews
-        CardView cardView = (CardView) findViewById(R.id.cvEsConductor);
-        cardView.setVisibility(View.GONE);
-        CardView cardView2 = (CardView) findViewById(R.id.cvNoEsConductor);
-        cardView2.setVisibility(View.GONE);
-        //oculto los botones
-        Button botonVerde = (Button) findViewById(R.id.button1);
-        botonVerde.setVisibility(View.GONE);
-        Button botonRojo = (Button) findViewById(R.id.button2);
-        botonRojo.setVisibility(View.GONE);
-        Button refresh = (Button) findViewById(R.id.refreshButton);
-        refresh.setVisibility(View.GONE);
+
 
         //pasar el codigo al /token para obtener el accessToken
         if(code != null){
